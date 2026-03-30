@@ -103,7 +103,7 @@ const Landing = () => {
 
       <footer className="border-t border-border/50 py-8 px-4">
         <div className="max-w-7xl mx-auto text-center text-sm text-foreground/60">
-          <p>&copy; 2024 LexiAssist. Made with 💜 for young learners.</p>
+          <p>&copy; 2026 LexiAssist. Made with 💜 for young learners.</p>
           <p className="mt-2 text-xs">
             This is not a clinical diagnosis tool. Please consult with healthcare professionals for formal assessments.
           </p>

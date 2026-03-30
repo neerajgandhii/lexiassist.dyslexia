@@ -10,9 +10,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const { preferredLanguage } = useTest();
   
   const footerText = {
-    english: "© 2025 LexiAssist. Making learning fun for everyone!",
-    hindi: "© 2025  लेक्सी असिस्ट। सभी के लिए सीखना मज़ेदार बनाना!",
-    tamil: "© 2025 லெக்ஸி அசிஸ்ட். அனைவருக்கும் கற்றல் வேடிக்கையாக!"
+    english: "© 2026 LexiAssist. Making learning fun for everyone!",
+    hindi: "© 2026  लेक्सी असिस्ट। सभी के लिए सीखना मज़ेदार बनाना!",
+    tamil: "© 2026 லெக்ஸி அசிஸ்ட். அனைவருக்கும் கற்றல் வேடிக்கையாக!"
   };
 
   return (

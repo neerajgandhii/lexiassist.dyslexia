@@ -13,10 +13,10 @@ const REGISTRATION_STEPS = ['Parent Info', 'Child Profile', 'Learning Background
 const SignUpStep1 = () => {
   const navigate = useNavigate();
   const DEMO_DEFAULTS = {
-    parentName: 'Neeraj Gandhi',
+    parentName: 'Alex Johnson',
     relationship: 'parent',
-    email: 'neerajgandhii2003@gmail.com',
-    mobile: '+91 (921) 012-3456',
+    email: 'alex.johnson@example.com',
+    mobile: '+1 (555) 012-3456',
     preferredLanguage: 'english',
   };
 
@@ -35,6 +35,12 @@ const SignUpStep1 = () => {
     if (!emailRegex.test(formData.email)) {
       toast.error('Please enter a valid email address');
       return;
+    }
+
+    // Ping backend health check in background to warm up cold start
+    const apiUrl = import.meta.env.VITE_API_URL || '';
+    if (apiUrl) {
+      fetch(`${apiUrl}/health`).catch(() => {});
     }
 
     localStorage.setItem('signup_step1', JSON.stringify(formData));
