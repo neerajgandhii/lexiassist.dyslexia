@@ -12,16 +12,18 @@ const REGISTRATION_STEPS = ['Parent Info', 'Child Profile', 'Learning Background
 
 const SignUpStep3 = () => {
   const navigate = useNavigate();
+  const DEMO_DEFAULTS = {
+    strugglingWithReading: 'not-sure',
+    letterMixups: 'sometimes',
+    feelingAboutReading: 'neutral',
+    teacherMentioned: 'no',
+    difficultySpelling: 'not-sure',
+    prefersListening: 'yes',
+  };
+
   const [formData, setFormData] = useState(() => {
     const saved = localStorage.getItem('signup_step3');
-    return saved ? JSON.parse(saved) : {
-      strugglingWithReading: '',
-      letterMixups: '',
-      feelingAboutReading: '',
-      teacherMentioned: '',
-      difficultySpelling: '',
-      prefersListening: '',
-    };
+    return saved ? JSON.parse(saved) : DEMO_DEFAULTS;
   });
 
   const handleNext = () => {

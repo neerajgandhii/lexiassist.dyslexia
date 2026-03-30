@@ -13,15 +13,17 @@ const REGISTRATION_STEPS = ['Parent Info', 'Child Profile', 'Learning Background
 
 const SignUpStep2 = () => {
   const navigate = useNavigate();
+  const DEMO_DEFAULTS = {
+    childName: 'Khushi',
+    childAge: '10',
+    childGrade: '4th',
+    primaryLanguage: 'english',
+    languagesCanRead: ['English'] as string[],
+  };
+
   const [formData, setFormData] = useState(() => {
     const saved = localStorage.getItem('signup_step2');
-    return saved ? JSON.parse(saved) : {
-      childName: '',
-      childAge: '',
-      childGrade: '',
-      primaryLanguage: '',
-      languagesCanRead: [] as string[],
-    };
+    return saved ? JSON.parse(saved) : DEMO_DEFAULTS;
   });
 
   const languageOptions = ['English', 'Spanish', 'Hindi', 'French', 'Mandarin', 'Other'];

@@ -12,15 +12,17 @@ const REGISTRATION_STEPS = ['Parent Info', 'Child Profile', 'Learning Background
 
 const SignUpStep1 = () => {
   const navigate = useNavigate();
+  const DEMO_DEFAULTS = {
+    parentName: 'Neeraj Gandhi',
+    relationship: 'parent',
+    email: 'neerajgandhii2003@gmail.com',
+    mobile: '+91 (921) 012-3456',
+    preferredLanguage: 'english',
+  };
+
   const [formData, setFormData] = useState(() => {
     const saved = localStorage.getItem('signup_step1');
-    return saved ? JSON.parse(saved) : {
-      parentName: '',
-      relationship: '',
-      email: '',
-      mobile: '',
-      preferredLanguage: '',
-    };
+    return saved ? JSON.parse(saved) : DEMO_DEFAULTS;
   });
 
   const handleNext = () => {
@@ -48,6 +50,11 @@ const SignUpStep1 = () => {
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-foreground mb-2">Parent Information</h1>
             <p className="text-foreground/70">Let's start with your basic details</p>
+          </div>
+
+          <div className="mb-6 flex items-center gap-2 rounded-lg border border-blue-200 bg-blue-50 px-4 py-3 text-sm text-blue-800">
+            <span>👋</span>
+            <span><strong>Demo mode:</strong> Fields are pre-filled — just press Next to explore the app.</span>
           </div>
 
           <div className="space-y-6">

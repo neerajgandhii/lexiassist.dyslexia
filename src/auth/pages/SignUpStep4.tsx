@@ -13,13 +13,15 @@ const REGISTRATION_STEPS = ['Parent Info', 'Child Profile', 'Learning Background
 
 const SignUpStep4 = () => {
   const navigate = useNavigate();
+  const DEMO_DEFAULTS = {
+    problemsSince: 'Since 2nd grade',
+    problemAreas: ['Reading comprehension', 'Spelling'] as string[],
+    additionalInfo: '',
+  };
+
   const [formData, setFormData] = useState(() => {
     const saved = localStorage.getItem('signup_step4');
-    return saved ? JSON.parse(saved) : {
-      problemsSince: '',
-      problemAreas: [] as string[],
-      additionalInfo: '',
-    };
+    return saved ? JSON.parse(saved) : DEMO_DEFAULTS;
   });
 
   const problemAreaOptions = [

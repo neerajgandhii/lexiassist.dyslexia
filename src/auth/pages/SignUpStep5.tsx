@@ -14,8 +14,8 @@ const SignUpStep5 = () => {
   const navigate = useNavigate();
   const { signup } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
-  const [consentAnalysis, setConsentAnalysis] = useState(false);
-  const [consentTerms, setConsentTerms] = useState(false);
+  const [consentAnalysis, setConsentAnalysis] = useState(true);
+  const [consentTerms, setConsentTerms] = useState(true);
 
   const handleSubmit = async () => {
     if (!consentAnalysis) {
