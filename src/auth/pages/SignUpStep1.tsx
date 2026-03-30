@@ -13,10 +13,10 @@ const REGISTRATION_STEPS = ['Parent Info', 'Child Profile', 'Learning Background
 const SignUpStep1 = () => {
   const navigate = useNavigate();
   const DEMO_DEFAULTS = {
-    parentName: 'Alex Johnson',
-    relationship: 'parent',
-    email: 'alex.johnson@example.com',
-    mobile: '+1 (555) 012-3456',
+    parentName: 'Neeraj Gandhi',
+    relationship: 'father',
+    email: 'neerajgandhii2003@gmail.com',
+    mobile: '+91 (921) 012-3456',
     preferredLanguage: 'english',
   };
 
